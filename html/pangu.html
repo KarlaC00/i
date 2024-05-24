@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">La Creación del Universo en la Mitología China</span><br>
+                <span>En este blog abordaremos el mito de Pangu y su relevancia en la cultura china. Puedes mencionar que este antiguo relato ha influido en la filosofía, el arte y la religión chinos.</span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>En las profundidades del caos primordial, donde el orden y la forma aún no habían tomado su lugar, existía un 
+                    huevo cósmico. Este huevo, envuelto en un misterio insondable, contenía todas las posibilidades del universo aún 
+                    por nacer. Dentro de este huevo, las fuerzas del Yin y el Yang estaban entrelazadas en una danza eterna, esperando 
+                    el momento de su despertar. <br><br> Después de 18,000 años, el huevo cósmico se rompió y de él emergió Pangu, el gigante 
+                    primordial. Con su aparición, comenzó la gran tarea de dar forma al cosmos. Armado con su hacha poderosa, Pangu se 
+                    puso a trabajar, separando el Yin del Yang, el cielo de la tierra, la luz de la oscuridad. Con cada golpe de su 
+                    hacha, el cielo se elevaba y la tierra se ensanchaba. Pangu crecía diez pies cada día, y durante otros 18,000 años, 
+                    continuó su labor hasta que el cielo y la tierra estuvieron completamente separados y el orden fue establecido. <br><br>
+                    Al final de su monumental tarea, Pangu estaba exhausto. Su cuerpo se convirtió en los elementos del mundo natural: 
+                    sus ojos en el sol y la luna, su aliento en el viento y las nubes, y su voz en el trueno. Las montañas y los ríos 
+                    fueron formados por su carne y sangre, y así, incluso en la muerte, Pangu dio vida al mundo que conocemos. El mito 
+                    de Pangu no solo narra la creación del mundo, sino que también enseña sobre la importancia de la dualidad y el 
+                    equilibrio. Representa la interdependencia de las fuerzas opuestas y cómo, incluso en la separación, hay una 
+                    conexión profunda que sostiene la armonía del universo.</span>
+                    <br>
+                    <img src="../multimedia/pangu.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>Dualidad y Equilibrio
+                        El mito de Pangu destaca la dualidad inherente en el universo: el Yin y el Yang, el cielo y la tierra, la luz y 
+                        la oscuridad. Estos conceptos no solo representan opuestos, sino también complementarios. La dualidad es 
+                        fundamental en la cosmología china, donde todo existe en relación con su opuesto y cada aspecto tiene su 
+                        contraparte necesaria para mantener el equilibrio.</li>
+
+                    <li>Interdependencia de las Fuerzas Opuestas
+                        En la historia, Pangu separa el Yin del Yang para crear el cielo y la tierra, pero incluso en esta separación, 
+                        hay una conexión intrínseca. Esto simboliza que las fuerzas opuestas no pueden existir de manera aislada; una 
+                        depende de la otra para definirse y para existir. La interdependencia es un principio clave en la filosofía 
+                        china, que enfatiza que todas las cosas están conectadas y afectan unas a otras.</li>
+                    
+                    <li>El Ciclo de Creación y Transformación
+                        La muerte de Pangu y la transformación de su cuerpo en los elementos del mundo natural también simbolizan el 
+                        ciclo continuo de creación, destrucción y renovación. Esto refleja la creencia de que la muerte no es el final, 
+                        sino una transición a una nueva forma de existencia, contribuyendo al ciclo perpetuo de la vida.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XbdfvqnPUC8?si=ar3DCzjcbYHB17Bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

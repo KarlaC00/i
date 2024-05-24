@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judeocristiana</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">La Creación en la Cultura judeocristiana</span><br>
+                <span>En este blog abordaremos el mito de la creación judeocristiana y su simbolismos en la cultura occidental</span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>La creación del universo según la tradición judeocristiana, narrada en los primeros capítulos del libro del 
+                    Génesis, describe cómo Dios creó el mundo en seis días. En el primer día, Dios creó la luz, separándola de la 
+                    oscuridad y llamando a la luz "día" y a la oscuridad "noche". En el segundo día, Dios creó el firmamento, separando 
+                    las aguas de arriba de las aguas de abajo. En el tercer día, Dios juntó las aguas debajo del cielo en un lugar, 
+                    dejando que apareciera la tierra seca, y creó la vegetación. <br><br> En el cuarto día, Dios creó los astros celestiales: el 
+                    sol, la luna y las estrellas, para que sirvieran como señales para las estaciones, días y años. En el quinto día, 
+                    Dios creó los seres vivos en las aguas y las aves que vuelan sobre la tierra. En el sexto día, Dios creó los 
+                    nimales terrestres y, finalmente, al ser humano a su imagen y semejanza, dándoles dominio sobre toda la creación. 
+                    En el séptimo día, Dios descansó, bendiciendo y santificando este día como un día de reposo.</span>
+                    <br>
+                    <img src="../multimedia/creacion.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>El Orden del Caos: El proceso de creación, que va desde un estado desordenado y vacío hacia un cosmos ordenado, refleja la capacidad de Dios para establecer el orden y las leyes que rigen el universo. Este orden es fundamental para la vida y refleja la naturaleza intencional y estructurada del acto creador de Dios.</li>
+
+                    <li>El Número Siete: El uso del número siete, culminando en el día de reposo, tiene un profundo significado 
+                        simbólico. Representa la plenitud, la perfección y la totalidad. El descanso de Dios en el séptimo día no solo 
+                        instituye el sábado como un día sagrado, sino que también subraya la importancia del descanso y la 
+                        contemplación en la vida humana.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yg_A80TMhaM?si=WDbp5RMrL1cuqos4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

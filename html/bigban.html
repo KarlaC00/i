@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Bang</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">Big Bang</span><br>
+                <span>El Big Bang es una de las teorías más fascinantes y ampliamente aceptadas en la cosmología moderna sobre el 
+                    origen del universo. En este blog abordaremos sobre que es.</span>
+                    <hr>
+                <span class="subtitulo">¿Qué es el Big Bang?</span><br>
+                <span>Hace unos 13,800 millones de años, toda la materia del universo estaba concentrada en un punto infinitamente 
+                    pequeño y de altísima densidad. En un momento dado, este punto "explotó" y comenzó a expandirse en todas las 
+                    direcciones, dando origen al universo, al espacio y al tiempo. Los físicos teóricos han logrado reconstruir los 
+                    eventos desde 1/100 de segundo después del Big Bang. <br> Inicialmente, el universo estaba en un estado extremadamente 
+                    caliente y denso. A medida que el universo se expandía, se enfriaba lo suficiente como para permitir la formación 
+                    de las primeras partículas subatómicas, como electrones, positrones, mesones, bariones, neutrinos y fotones, entre 
+                    otras. Con el enfriamiento continuado, los protones y neutrones se unieron para formar núcleos atómicos, y 
+                    posteriormente, los electrones se combinaron con estos núcleos para formar átomos. <br> Bajo la influencia de la 
+                    gravedad, la materia comenzó a agruparse, formando nubes de los elementos primordiales. Algunas de estas nubes 
+                    crecieron tanto que comenzaron a colapsar bajo su propia gravedad, formando estrellas. Estas estrellas se agruparon 
+                    para formar galaxias.</span>
+                    <br>
+                    <img src="../multimedia/bigbang.jpg">
+                    
+                <span class="subtitulo">Evidencias del Big Bang</span> <br>
+                <ul>
+                    <li>Radiación de Fondo Cósmico de Microondas (CMB): Descubierta en 1965 por Arno Penzias y Robert Wilson, esta 
+                        radiación es el remanente del calor del Big Bang, observable hoy como un débil resplandor en todas las 
+                        direcciones del espacio.</li>
+
+                    <li>Corrimiento al Rojo de las Galaxias: Observaciones de Edwin Hubble en la década de 1920 mostraron que las 
+                        galaxias se alejan de nosotros, lo que indica que el universo se está expandiendo. Cuanto más lejos está una 
+                        galaxia, más rápido se aleja, lo que se conoce como ley de Hubble.</li>
+                    
+                    <li>Abundancia de Elementos Ligeros: Las proporciones de hidrógeno, helio y otros elementos ligeros en el universo 
+                        concuerdan con las predicciones de la nucleosíntesis primordial.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-0jZYoIjKPI?si=s21Xk13qzxa84ymW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+</body>
+</html>

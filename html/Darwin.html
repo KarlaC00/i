@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución Darwin</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">Evolucion Charles Darwin</span><br>
+                <span>En este blog abordaremos la evolucion humana segun la ciencia. Este relato científico nos ofrece una ventana al pasado, revelando cómo las especies han cambiado y se han adaptado a lo largo de millones de años.  </span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>Charles Darwin, el naturalista británico del siglo XIX, revolucionó nuestra comprensión de la vida en la Tierra 
+                    con su teoría de la evolución por selección natural. Esta teoría, detallada principalmente en su obra El Origen de 
+                    las Especies (1859), también sienta las bases para comprender el origen de la humanidad. La teoría de la evolución 
+                    por selección natural de Darwin se basa en varios puntos clave: la variación dentro de cualquier especie, la 
+                    herencia de muchas de estas variaciones, la supervivencia y reproducción de los individuos con características 
+                    ventajosas, y la acumulación de cambios beneficiosos con el tiempo. Aunque Darwin no abordó el origen humano en 
+                    detalle en El Origen de las Especies, dejó pistas que sugerían que los humanos no eran una excepción a su teoría. 
+                    En su libro posterior, El Origen del Hombre (1871), Darwin explora más directamente cómo la evolución se aplica a 
+                    los humanos, señalando similitudes con otros primates, el registro fósil y la selección sexual como factores 
+                    cruciales en nuestra evolución. La teoría de Darwin tuvo profundas implicaciones filosóficas y sociales, desafiando 
+                    muchas creencias religiosas y conceptos tradicionales de la humanidad. Desde entonces, múltiples campos de la 
+                    ciencia, como la genética, la paleoantropología, la biogeografía y la ecología, han proporcionado evidencia adicional 
+                    que respalda la teoría de la evolución humana. Esta comprensión nos invita a ver nuestra conexión profunda con el 
+                    resto del mundo natural y a apreciar la complejidad y belleza del proceso evolutivo.</span>
+                    <br>
+                    <img src="../multimedia/Darwin.jpg">
+                    <br>
+                <span class="subtitulo">Evidencias</span> <br>
+                <ul>
+                    <li>Genética: Los estudios genéticos han demostrado que los humanos comparten más del 98% de su ADN con los chimpancés, lo que confirma la estrecha relación evolutiva.</li>
+
+                    <li>Paleoantropología: El descubrimiento de numerosos fósiles ha llenado muchos vacíos en el registro evolutivo humano, mostrando una clara progresión desde formas más primitivas a los humanos modernos.</li>
+                    
+                    <li>Biogeografía y Ecología: La distribución de especies y sus adaptaciones a diferentes ambientes respalda la idea de la evolución adaptativa que Darwin propuso.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CBAwcRaVzA4?si=bUPJYTzhn4hOINGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

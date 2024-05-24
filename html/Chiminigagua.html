@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chibcha</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">La Creación en la Cultura Chibcha</span><br>
+                <span>En este blog abordaremos la creación chibcha y su relevancia en la cultura muisca. Este antiguo relato </span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>Según la mitología Chibcha, Chiminigagua es el ser supremo, omnipotente y creador del mundo. En un principio, 
+                    todo estaba en tinieblas, y solo reinaba la luz de Chiminigagua. Aquí está el relato conciso sobre el origen del 
+                    universo según esta fascinante creencia: Cuenta la historia que, en el principio del mundo, todo estaba en 
+                    tinieblas y solamente reinaba la luz de Chiminigagua. Cuando el dios creador quiso difundir la luz por todo el 
+                    universo, creó dos grandes aves negras y las lanzó al espacio. Estas aves, al exhalar aire por sus picos, esparcían 
+                    una luz incandescente, iluminando todo el cosmos. Así se hizo la luz y se crearon todas las cosas del mundo. <br><br>
+                    En el proceso de creación de todo lo existente en el universo, Chiminigagua señaló la importancia de adorar al sol o 
+                    Suhá y a su mujer y compañera Chía, o la luna. La adoración al sol y a la luna, para los Chibchas, era la adoración a 
+                    Chiminigagua, el ser supremo.</span>
+                    <br>
+                    <img src="../multimedia/chibcha.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>Elementos Naturales: La interacción de los dioses con elementos naturales como el sol, la luna y la tierra 
+                        refleja la profunda conexión de los muiscas con su entorno. El mito subraya la importancia de la naturaleza en 
+                        la vida diaria y en la espiritualidad chibcha.</li>
+
+                    <li>Luz y Oscuridad: La creación comienza con la dispersión de la luz por Chiminigagua, simbolizando el paso del 
+                        caos a la orden. La luz es un símbolo de conocimiento, vida y poder divino.</li>
+                    
+                    <li>Chía (Huitaca): Como diosa de la luna, Chía simboliza la feminidad, la noche y la fertilidad. Su presencia 
+                        complementa la de Bochica, estableciendo un equilibrio entre lo masculino y lo femenino, lo diurno y lo 
+                        nocturno.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZtkIlKTYuyo?si=41Q79W47F8aFDzMV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

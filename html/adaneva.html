@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adan y Eva</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">Adán y Eva: Un Viaje al Origen de la Humanidad en la Mitología judeocristiana</span><br>
+                <span>
+                    El relato de Adán y Eva en la tradición judeocristiana ofrece un fascinante tapiz de simbolismo y significado, explorando los misterios del origen humano y la relación con lo divino.</span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>
+                    En el principio, Dios crea el universo y todo lo que hay en él en seis días. En el sexto día, decide crear al hombre y a la mujer a su imagen y semejanza. Forma al hombre del polvo de la tierra y lo llama Adán, y luego crea a la mujer de una costilla de Adán y la llama Eva. Dios coloca a Adán y Eva en el Jardín del Edén, un paraíso terrenal, y les da la responsabilidad de cuidarlo y gobernar sobre él. En el jardín, hay dos árboles específicos mencionados: el árbol de la vida y el árbol del conocimiento del bien y del mal. <br><br> Dios prohíbe a Adán y Eva comer del fruto del árbol del conocimiento del bien y del mal, advirtiéndoles que si lo hacen, morirán. Sin embargo, la serpiente, que representa la tentación y el engaño, persuade a Eva para que desobedezca a Dios y coma del fruto prohibido. Eva, a su vez, ofrece el fruto a Adán, quien también lo come. Como resultado de su desobediencia, sus ojos se abren y adquieren el conocimiento del bien y del mal, pero también se vuelven conscientes de su desnudez y sienten vergüenza. Cuando Dios descubre su desobediencia, los confronta y pronuncia castigos sobre ellos y la serpiente. A Adán y Eva se les expulsa del Edén, y Dios coloca querubines y una espada de fuego para proteger el acceso al árbol de la vida. Adán y Eva, ahora sujetos a la mortalidad y al trabajo duro, deben abandonar el Edén y enfrentar las dificultades del mundo exterior.</span>
+                    <br>
+                    <img src="../multimedia/eva.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>La expulsión del Edén: La expulsión de Adán y Eva del Edén representa la pérdida de la inocencia y la entrada en un mundo marcado por el sufrimiento, el trabajo duro y la mortalidad. También simboliza la separación entre la humanidad y Dios como resultado del pecado.</li>
+
+                    <li>El árbol del conocimiento del bien y del mal: Este árbol representa la capacidad del ser humano para discernir entre el bien y el mal, pero también implica la tentación y la elección moral. La desobediencia de Adán y Eva al comer del fruto representa la entrada del pecado en el mundo y la ruptura de la relación con Dios.</li>
+                    
+                    <li>Imagen y semejanza de Dios: La idea de que el ser humano fue creado a imagen y semejanza de Dios sugiere que cada individuo tiene un valor intrínseco y una conexión especial con lo divino.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yOp6tKsoaRs?si=qWQJVwpIXgaP25gU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

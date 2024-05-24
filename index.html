@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origenes</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src="nav.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            function cargarNav() {
+                fetch('./html/nav.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        // Insertar el contenido en el contenedor
+                        document.getElementById('nav').innerHTML = html;
+                    })
+                    .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>
+    </nav>
+
+    <main>
+        <section class="section1">
+            <div class="img">
+                <p>"En los orígenes reside la magia de lo que está por venir."</p>
+            </div>
+        </section>
+
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">Bienvenidos</span><br>
+                <span>¡Bienvenidos a un viaje a través de las edades, explorando los misterios del origen del universo y la humanidad 
+                    en todas sus facetas! En este espacio, nos sumergiremos en las profundidades del conocimiento ancestral, la 
+                    reflexión filosófica, las narrativas mitológicas y la visión científica para comprender nuestra existencia en este 
+                    vasto cosmos.</span>
+                    <br>
+                <span>Desde tiempos inmemoriales, los seres humanos han buscado respuestas a las preguntas fundamentales sobre nuestro 
+                    origen y propósito en el universo. En la antigüedad, las culturas de todo el mundo crearon mitos y leyendas para 
+                    explicar el surgimiento del cosmos y la presencia de la humanidad en él. Estas historias, cargadas de simbolismo y 
+                    significado, reflejan la profunda conexión entre las personas y su entorno natural, así como sus anhelos y temores 
+                    más profundos.</span>  
+                <hr>
+            </div>
+        </section>
+
+        <section class="section3">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/qd1YehNpbV4?si=DdF1YXlIX2u-I6Nz&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section class="section4">
+
+            <div class="contenedor">
+                <span style="font-size: 50px;">Blogs recien agregados</span>
+            </div>
+
+            <div class="contenedor">
+                <img src="./multimedia/bachue.jpg" class="blogimg">
+                <div class="texto">
+                        <div class="dentrotexto">
+                        <a href="./html/banchue.html">
+                            <span>Bachué: Origen, Naturaleza y Comunidad en la Mitología Colombiana</span> <br>
+                            <div class="Descripcion"><span>Exploraremos el mito de Banchué, una historia llena de magia y sabiduría ancestral de la cultura africana. Sumérgete en este relato cautivador lleno de aventura y misterio, y descubre sus significados ocultos y su relevancia en el mundo contemporáneo. ¡Acompáñanos en este viaje fascinante!.</span></div>
+                        </a>
+                        </div>
+                <hr class="fondo">
+                </div>
+            </div>
+
+            <div class="contenedor">
+                <img src="./multimedia/pangu.jpg" class="blogimg">
+                <div class="texto">
+                        <div class="dentrotexto">
+                        <a href="./html/pangu.html">
+                            <span>La Creación del Universo en la Mitología China</span> <br>
+                            <div class="Descripcion"><span>La mitología china está repleta de relatos fascinantes que explican el origen del mundo y sus maravillas. Uno de los mitos más antiguos y emblemáticos es el de Pangu, una figura titánica que, según la leyenda, dio forma al universo con su propio cuerpo. Esta historia no solo ofrece una visión única sobre la creación, sino que también refleja la profunda conexión entre la naturaleza y la cultura en la antigua China. </span></div>
+                        </a>
+                        </div>
+                <hr class="fondo">
+                </div>
+            </div>
+
+            <div class="contenedor">
+                <img src="./multimedia/maya.jpg" class="blogimg">
+                <div class="texto">
+                        <div class="dentrotexto">
+                        <a href="./html/maya.html">
+                            <span>La Creación en la Cultura maya</span> <br>
+                            <div class="Descripcion"><span>La cultura maya, con su rica historia y compleja mitología, nos ofrece una visión fascinante del origen del mundo. Entre sus textos sagrados más importantes se encuentra el Popol Vuh, una obra que narra la creación del universo, la humanidad y las maravillas de la naturaleza. Este relato, cargado de simbolismo y espiritualidad, revela la profunda conexión de los mayas con el cosmos y su percepción del equilibrio entre el cielo, la tierra y el inframundo.</span></div>
+                        </a>
+                        </div>
+                <hr class="fondo">
+                </div>
+            </div>
+
+        </section>
+
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('./html/footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindú</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">La Creación en la Cultura Hindú</span><br>
+                <span>En este blog abordaremos el mito de la creación hindu y su simbolismos en la cultura</span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span> el universo comienza en un estado de caos y vacío, representado por un océano primordial de nada llamado 
+                    "Nirguna Brahman". En este océano, Vishnu, la deidad suprema que representa la preservación, reposa en un estado de 
+                    sueño sobre la serpiente cósmica Ananta Shesha. De repente, un brote emerge del ombligo de Vishnu, dando origen a 
+                    una flor de loto radiante. En el centro de esta flor se encuentra Brahma, el dios creador, quien despierta y se 
+                    embarca en el acto de creación. Brahma, dotado de poderes divinos, comienza a crear el universo mediante la 
+                    manifestación de los cinco elementos primordiales: tierra, agua, fuego, aire y éter. Brahma, a través de su 
+                    sabiduría y poder, da forma al universo y a todas las formas de vida que lo habitan. <br><br> Él crea los planetas, las 
+                    estrellas, los seres vivos y todo lo que constituye el cosmos. Este acto de creación no es simplemente una acción 
+                    física, sino que también implica la emisión de las leyes cósmicas y la estructura fundamental que gobierna el 
+                    funcionamiento del universo, conocida como "dharma". Después de completar la creación inicial, Brahma continúa 
+                    supervisando el desarrollo y la evolución del universo, mientras que Vishnu asume el papel de preservador, 
+                    asegurando que el equilibrio cósmico se mantenga. Shiva, la tercera deidad principal en el panteón hindú, 
+                    representa el aspecto destructor del ciclo cósmico, disolviendo el universo al final de cada ciclo para preparar 
+                    el terreno para una nueva creación.</span>
+                    <br>
+                    <img src="../multimedia/hindu.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>El Orden del Caos: El proceso de creación, que va desde un estado desordenado y vacío hacia un cosmos ordenado, refleja la capacidad de Dios para establecer el orden y las leyes que rigen el universo. Este orden es fundamental para la vida y refleja la naturaleza intencional y estructurada del acto creador de Dios.</li>
+
+                    <li>El Número Siete: El uso del número siete, culminando en el día de reposo, tiene un profundo significado 
+                        simbólico. Representa la plenitud, la perfección y la totalidad. El descanso de Dios en el séptimo día no solo 
+                        instituye el sábado como un día sagrado, sino que también subraya la importancia del descanso y la 
+                        contemplación en la vida humana.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wsT9FCnBe9o?si=u3_jhvlk3Cc7-Aa2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

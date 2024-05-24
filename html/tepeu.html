@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tepeu</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">El Origen de la Humanidad según el Popol Vuh: En la Cultura Maya</span><br>
+                <span>El texto sagrado de los mayas quichés, está lleno de significados y simbolismos que reflejan la profunda cosmovisión y los valores esenciales de esta cultura mesoamericana.
+                    </span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>
+                    La creación de la humanidad comenzó con los dioses Tepeu y Gucumatz, quienes, en un principio, solo tenían el cielo y el mar. Decidieron crear el mundo y lo hicieron con su palabra, formando la tierra, las montañas, los valles, los bosques y los animales. Intentaron primero crear humanos de barro, pero estos seres eran frágiles y se deshacían fácilmente. Luego, probaron con madera, pero aunque estos seres podían hablar, carecían de alma y entendimiento, y no adoraban a los dioses, por lo que fueron destruidos por un diluvio y atacados por sus propios utensilios y animales. <br><br> Finalmente, los dioses utilizaron maíz, un elemento sagrado, para crear a los primeros verdaderos humanos: Balam-Quitzé, Balam-Acab, Mahucutah e Iqui-Balam. Estos seres eran perfectos y sabios, con una visión tan aguda que los dioses decidieron limitar para que solo pudieran ver lo que estaba cerca. Luego, los dioses crearon mujeres para acompañar a estos hombres, y de estas uniones surgieron los antepasados de los pueblos mayas, consolidando así la creación de la humanidad.</span>
+                    <br>
+                    <img src="../multimedia/Tepeu.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>El Maíz como Fuente de Vida: El maíz era el alimento básico de los mayas y también un elemento sagrado. La creación de los primeros humanos a partir de maíz destaca la conexión íntima entre el ser humano y la naturaleza, subrayando la importancia del maíz no solo como sustento físico, sino también espiritual. Representa la idea de que la vida humana está intrínsecamente ligada a la tierra y sus frutos.</li>
+
+                    <li>La Dualidad y el Equilibrio: La creación de hombres y mujeres y su unión para formar comunidades refleja el principio de dualidad y complementariedad, fundamental en la cosmovisión maya. Este equilibrio entre lo masculino y lo femenino es esencial para la armonía y la continuidad de la vida.</li>
+                    
+                    <li>La Palabra Creadora de los Dioses: La creación del mundo y los seres vivos mediante la palabra de los dioses simboliza el poder de la palabra y el conocimiento en la cultura maya. Este concepto resalta la importancia de la comunicación, los rituales y la tradición oral en la transmisión de sabiduría y valores culturales.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eVPZfNjXZog?si=woSeJfGMCV6-RH4r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

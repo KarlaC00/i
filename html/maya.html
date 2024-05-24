@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maya</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">La Creación en la Cultura maya</span><br>
+                <span>En este blog abordaremos el mito de la creación maya y su simbolismos en la cultura</span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>los dioses intentaron crear el mundo y sus habitantes en varias etapas. Inicialmente, hubo una serie de intentos 
+                    fallidos. Por ejemplo, en un primer intento de crear humanos, los dioses utilizaron madera para moldearlos, pero 
+                    estas criaturas resultaron ser secas y rígidas, incapaces de adorar a sus creadores. <br><br> En un segundo intento, los 
+                    dioses crearon humanos de barro, pero estos seres resultaron ser demasiado blandos y se deshicieron cuando llovió. 
+                    Luego, los dioses intentaron crear humanos a partir de maíz, que era considerado un alimento sagrado. Esta vez, los 
+                    humanos resultantes eran fuertes, capaces de trabajar la tierra y rendir culto a los dioses.</span>
+                    <br>
+                    <img src="../multimedia/maya.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>Conexión entre lo divino y lo humano: La creación de los humanos a partir del maíz simboliza una conexión 
+                        profunda entre la humanidad y la naturaleza, así como entre lo divino y lo terrenal. Los seres humanos, siendo 
+                        creados de un alimento sagrado, están intrínsecamente conectados con el mundo natural y con los dioses que los 
+                        crearon. Esta conexión sugiere una visión holística de la existencia, en la que los humanos son parte integral 
+                        del tejido del cosmos.</li>
+
+                    <li>El papel de los dioses como creadores y ordenadores del universo: En la mitología Maya, los dioses desempeñan 
+                        un papel central como creadores y ordenadores del mundo. Su capacidad para moldear y dar forma al universo 
+                        refleja la idea de que los dioses son responsables de mantener el orden cósmico y guiar el destino de la 
+                        humanidad.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/IGvBqAUOlUI?si=71mbIomZGo20-NkL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

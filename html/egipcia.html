@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egipcia</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">La Creación en la Cultura Egipcia</span><br>
+                <span>En este blog abordaremos la creación Egipcia y la interrelación entre el caos y el orden, la luz y la oscuridad,</span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>El origen del universo comienza con Nun, el océano primordial de caos del cual emerge una colina primordial. 
+                    Dependiendo de la región, diferentes deidades son responsables de la creación. En Hermópolis, la Ogdóada, un grupo 
+                    de ocho dioses, da origen a un huevo cósmico del que nace el dios solar Ra. En Heliópolis, Atum se manifiesta en 
+                    la colina primordial y crea a los primeros dioses, Shu y Tefnut, quienes a su vez generan a Geb y Nut, y 
+                    posteriormente a Osiris, Isis, Seth y Neftis, estableciendo el orden cósmico. En Menfis, Ptah crea el mundo 
+                    mediante el poder de su pensamiento y palabra, y en Tebas, Amon-Ra, el dios oculto y visible, es el creador. 
+                    Estas historias comparten elementos comunes como el caos acuático de Nun, la colina primordial y la creación de un 
+                    orden cósmico simbolizado por el concepto de Maat, que representa la justicia y la armonía.</span>
+                    <br>
+                    <img src="../multimedia/egipcio.jpg">
+                    <br>
+                    
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                    <ul>
+                        <li>Los Hijos de Geb y Nut: Estos dioses reflejan la dinámica de la vida, la muerte, y la regeneración, así como las fuerzas de la naturaleza y la sociedad.</li>
+    
+                        <li>Los Dioses Creadores: Los diferentes dioses creadores (Atum, Ptah, Amon-Ra) representan distintas formas de 
+                            concebir el acto creador. Atum y Ra simbolizan el sol y la regeneración diaria, Ptah representa la creación 
+                            a través del pensamiento y la palabra, y Amon-Ra combina el poder oculto y la manifestación visible.</li>
+                        
+                        <li>Nun y el Océano Primordial: Nun representa el caos primigenio y la potencialidad de la creación. Es la fuente de todo lo que existe, un estado de inexistencia y desorden antes de la creación del mundo ordenado. El agua de Nun simboliza la inmensidad y la profundidad de la creación potencial, el lugar donde yacen las semillas de todas las cosas.</li>
+                    </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-7VQUR-_F04?si=UP7al_Vf-s7w0y2L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>

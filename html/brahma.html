@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brahma</title>
+    <link rel="icon" href="../multimedia/1681722-ffffff.svg">
+    <script src=".././nav.js"></script>
+    <link rel="stylesheet" href="../css/plantilla.css">
+</head>
+<body>
+    <nav id="nav">
+        <script>
+            let navCargado = false; 
+            function cargarNav() {
+                if (!navCargado) {
+                    fetch('nav.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('nav').innerHTML = html;
+                            navCargado = true; 
+                        })
+                        .catch(error => console.error('Error al cargar el archivo nav.html:', error));
+                }
+            }
+            document.addEventListener("DOMContentLoaded", cargarNav);
+        </script>        
+    </nav>
+
+    <main>
+        <section class="section2">
+            <div class="contenido">
+                <span id="titulo">La Creación según Brahma: Un Universo de Simbolismo en la Mitología Hindú</span><br>
+                <span>
+                    La historia de Brahma y la creación del universo ofrece un profundo simbolismo que refleja la interconexión entre el creador, la creación y la naturaleza misma del cosmos.</span>
+                    <hr>
+                <span class="subtitulo">¿Que trata?</span><br>
+                <span>
+                    al principio solo existía el Brahman, la suprema realidad cósmica, sin forma ni atributos. De este Brahman emergió Brahma, el dios creador, quien es representado con cuatro cabezas mirando en todas las direcciones, simbolizando su omnipresencia. Brahma fue encargado de crear y ordenar el universo material. Para llevar a cabo esta tarea, primero creó el agua primordial, y en su superficie descansaba un huevo cósmico. Del huevo surgió Hiranyagarbha, también conocido como el "embrión dorado", quien es otra forma del dios Brahma. <br><br> Brahma, desde su posición dentro del huevo cósmico, comenzó el proceso de la creación. A través de su pensamiento y su voluntad divina, dio forma al universo. Creó los cielos, la tierra, los océanos y todos los seres vivos que los habitaban. Uno de los aspectos más interesantes de la creación según Brahma es su forma de dar origen a los seres humanos. Se dice que Brahma creó a los seres humanos a partir de diferentes partes de su propio cuerpo. Según esta narrativa, los brahmanes (la clase sacerdotal) surgieron de su boca, los guerreros y nobles (kshatriyas) de sus brazos, los comerciantes y agricultores (vaishyas) de sus muslos, y los trabajadores manuales (shudras) de sus pies. Brahma también creó a la humanidad al dar forma a los primeros seres humanos, Manu y Shatarupa, directamente de su mente. Manu es considerado el progenitor de la humanidad, y Shatarupa fue su esposa y compañera.</span>
+                    <br>
+                    <img src="../multimedia/brahma.jpg">
+                    <br>
+                <span class="subtitulo">Significado y Simbolismo</span> <br>
+                <ul>
+                    <li>La Creación desde las Partes del Cuerpo de Brahma: Este aspecto simboliza la interconexión entre el creador y su creación. Los diferentes grupos humanos emergen de las diferentes partes del cuerpo de Brahma, lo que sugiere que todas las formas de vida están intrínsecamente ligadas al dios creador.</li>
+
+                    <li>El Acto de Creación por Pensamiento y Voluntad: Este simbolismo resalta la importancia del poder de la mente y la voluntad en el proceso creativo. Sugiere que la creación no es solo un acto físico, sino también un acto de la mente divina.</li>
+                    
+                    <li>Las Cuatro Cabezas de Brahma: Representan la omnisciencia y la omnipresencia del dios creador. Mirando en todas las direcciones, simbolizan su capacidad para percibir y comprender todos los aspectos del universo.</li>
+                </ul>
+
+                <div class="iframe">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sUQsPdSHYIE?si=1QNhWVZQcTw9UkBh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                
+                    <hr>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <script>
+                function cargarfooter() {
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(html => {
+                            // Insertar el contenido en el contenedor
+                            document.getElementById('footer').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar el archivo footer.html:', error));
+                }
+                document.addEventListener("DOMContentLoaded", cargarfooter);
+            </script>
+        </footer>
+    </main>
+    <script src="../javascript/buscador.js"></script>
+</body>
+</html>
